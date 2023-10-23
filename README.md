@@ -1,1 +1,1 @@
-# Matching-Study-Room
+# StuBuds - A Study with Strangers Web Application
