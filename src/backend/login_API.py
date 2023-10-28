@@ -15,15 +15,7 @@ def createNewAcc():
 def authenticateUsrAcc():
     data = request.json 
 
-    userName = data["userName"]
-    password = data["password"]
-
-    usr_login = {
-        "user_name" : userName,
-        "password" : password
-    }
-
-    query = mgh.query_document(cf.database, cf.loginCollection, usr_login)
+    query = mgh.query_document(cf.database, cf.loginCollection, data)
 
     if (query):
         result = {"auth": True}
